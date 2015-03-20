@@ -1,0 +1,10 @@
+(define (pascal-tri n k)
+  (cond ((= k 1) 1)
+	((= k n) 1)
+	(else (+ (pascal-tri (- n 1) (- k 1))
+		 (pascal-tri (- n 1) k)))))
+
+(pascal-tri 1 1)
+(pascal-tri 5 1)
+(pascal-tri 5 5)
+(pascal-tri 5 3)
